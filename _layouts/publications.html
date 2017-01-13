@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row margin-top">
+        <div class="col s12">
+            <div class="card-panel tile z-depth-2">
+                <div class="tile-image-large">
+                    <img src="{{page.cover_image}}"/>
+                </div>
+                <div class="tile-content full">
+                    <div class="tile-description">
+                        {{content}}
+                        <ul class="collection with-header center">
+                            {% assign pubs = site.data.publications | category: 'Conferences Presentations' %}
+                            <li class="collection-header"><h4>{{pubs[0].category}}</h4></li>
+                            {% for pub in pubs %}
+                            <li class="collection-item">
+                                {% if pub.document %}
+                                <a href="{{pub.document}}" target="_blank" class="secondary-content"><i class="material-icons">file_download</i></a>
+                                {% endif %}
+                                <div>{{pub.author}}, "{{pub.title}}," {% if pub.paper_number %} presented as paper {{pub.paper_number}} at
+                                    the {{pub.organization}}, {% endif %} {% if pub.location %}{{pub.location}},{% endif %} {{pub.date}}.
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

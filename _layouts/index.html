@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% if page.show_parallax contains 'True' %}
+<div class="parallax-container parallax-container-full">
+    <div class="parallax">
+        <img src="{{page.parallax_image}}" />
+    </div>
+</div>
+{% endif %}
+
+<div class="container">
+    <div class="row margin-top">
+        <h3 class="white-text">Ongoing Projects</h3>
+        {% for project in site.data.msat-projects %}
+            <div class="col s12 l4">
+                <a href="/projects/{{project.url}}.html">
+                    <div class="card-panel tile hoverable z-depth-1 h200">
+                        <div class="tile-image-large">
+                            <img src="{{project.image}}" />
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-title">{{ project.title }}</div>
+                            <div class="tile-description">{{ project.tagline }}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {%  endfor %}
+    </div>
+    <div class="row margin-top card-panel white">
+        {{content}}
+    </div>
+</div>

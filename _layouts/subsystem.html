@@ -1,0 +1,36 @@
+---
+layout: default
+title: {{page.title}}
+---
+
+<div class="container">
+    <div class="row margin-top">
+        <div class="col s12">
+            <div class="card-panel tile z-depth-2">
+                <div class="tile-image-large">
+                    <img src="/images/space.jpg"/>
+                </div>
+                <div class="tile-content full">
+                    <div class="tile-title"><h3>{{ page.title }} {% if page.nickname %}({{ page.nickname }}){% endif %}</h3></div>
+                    <div class="tile-description">
+                        <p>{{ page.description | markdownify}}</p>
+                    </div>
+                    {% if page.images %}
+                    <div class="slider">
+                        <ul class="slides">
+                            {% for image in page.images %}
+                            <li>
+                                <img src="{{image.file}}">
+                                <div class="caption center-align">
+                                    <h3>{{image.caption}}</h3>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

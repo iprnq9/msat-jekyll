@@ -1,0 +1,9 @@
+- title: 'Missouri S&T'
+  logo: '/images/partners/MST_Logo.jpg'
+  url: 'http://mst.edu'
+  text: 'MST Description here...'
+
+- title: 'NASA'
+  logo: '/images/partners/nasa.jpg'
+  url: 'http://nasa.gov'
+  text: 'NASA Description here...'

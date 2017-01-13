@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row margin-top">
+        <div class="col s12">
+            <div class="card-panel tile z-depth-2">
+                <div class="tile-image-large">
+                    <img src="{{page.cover_image}}"/>
+                </div>
+                <div class="tile-content full">
+                    <h3>{{page.title}}</h3>
+                    <h6>{{page.date | date: '%B %d, %Y'}}</h6>
+                    <div class="tile-description">
+                        {{content}}
+                    </div>
+                    {% if page.images %}
+                    <div class="slider">
+                        <ul class="slides">
+                            {% for image in page.images %}
+                            <li>
+                                <img src="{{image.file}}">
+                                <div class="caption center-align">
+                                    <h3>{{image.caption}}</h3>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+- title: 'Communications'
+  nickname: 'COM'
+  url: 'communications'
+  description: 'An effective communications system is an essential part of any satellites operation; and in the latest design from the Missouri S&T Satellite Team, it becomes a major feature. The current design will consist of two independently functioning satellites called MrSat and MrsSat. Once in orbit, the two satellites will separate from one another and remain in communication via a 2.4 GHz, Class 1 Bluetooth connection. The larger of the two, MrSat, will act as the ground link for the satellite system. The antennae for this link will use the UHF band for communication with the ground station, which will be based in Rolla.'
+  image: '/image/goes/here.png'
+  images:
+    - file: '/images/space.jpg'
+      caption: 'Caption for comm image'
+    - file: '/images/space.jpg'
+      caption: 'Caption for comm image2'
+
+- title: 'Command and Data Handling'
+  url: 'command-and-data-handling'
+  description: 'The Command and Data Handling (C&DH) subsystem is responsible for the communication and control of all processing modules used on board the spacecraft. The configuration of these modules forms a distributed, embedded real-time system. The classification of this system imposes significant constraints on the design and implementation of the developed software system. Throughout the design process, simulation and testing is performed to ensure a reliable, robust software system. The primary goal of our computer system design is to allow the spacecraft formation to operate without requiring attention from Missouri S&T ground controllers. The secondary goal is to provide reliable control mechanisms for the formation command and control of small spacecraft.'
+
