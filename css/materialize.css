@@ -1741,11 +1741,11 @@
 }
 
 .orange.accent-2 {
-  background-color: #ffab40 !important;
+  background-color: #00c853 !important;
 }
 
 .orange-text.text-accent-2 {
-  color: #ffab40 !important;
+  color: #00c853 !important;
 }
 
 .orange.accent-3 {
@@ -4680,14 +4680,14 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #00c853;
   margin-right: 20px;
   transition: color .3s ease;
   text-transform: uppercase;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #00e676 ;
 }
 
 .card .card-reveal {

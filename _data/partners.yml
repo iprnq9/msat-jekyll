@@ -1,9 +1,12 @@
 - title: 'Missouri S&T'
   logo: '/images/partners/MST_Logo.jpg'
   url: 'http://mst.edu'
-  text: 'MST Description here...'
+  text: |
+        The Missouri School of Mines and Metallurgy (MSM) was founded in 1870-- the first technological institution west of the Mississippi, and one of the first in the nation. A product of the Morrill Act of 1862 and the land-grant movement of the late nineteenth century, MSM was Missouri's response to the acute need for scientific and practical education in the developing nation. In inaugurating the School, President of the University of Missouri, Daniel Read, stated its purpose:
 
+        This school is to be a school both of science and of its applications: its purpose is to teach knowledge and art -- first to know and then to do, and to do in the best manner.
 - title: 'NASA'
-  logo: '/images/partners/nasa.jpg'
+  logo: '/images/partners/NASA.png'
   url: 'http://nasa.gov'
-  text: 'NASA Description here...'
+  text: |
+        NASA stands for National Aeronautics and Space Administration. NASA is a United States government agency that is responsible for science and technology related to air and space. The Space Age started in 1957 with the launch of the Soviet satellite Sputnik. NASA was created in 1958. The agency was created to oversee U.S. space exploration and aeronautics research.

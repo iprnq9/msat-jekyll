@@ -19,56 +19,40 @@ layout: default
         </div>
 
         {% if page.timeline %}
-                <div class="col s12">
-                    <div class="">
-                        <h4 class="white-text center-align">{{ page.title }}&nbsp;Timeline</h4>
-                        <section class="timeline">
-                            <ul>{% for timeline in page.timeline %}
-                                <li>
-                                    <div>
-                                        <time>{{ timeline.date }}</time> {{ timeline.text }}
-                                    </div>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            {% endif %}
+        <div class="col s12">
+            <div class="">
+                <h4 class="white-text center-align">{{ page.title }}&nbsp;Timeline</h4>
+                <section class="timeline">
+                    <ul>{% for timeline in page.timeline %}
+                        <li>
+                            <div>
+                                <time>{{ timeline.date }}</time>
+                                {{ timeline.text }}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        </div>
+        {% endif %}
 
-        <div class="col s12 l4">
+        {% for person in page.people %}
+        <div class="col s12 l3">
             <div class="card">
                 <div class="card-image">
-                    <img src="/images/profile2.jpg">
+                    <img src="{{person.image}}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title">Dr. Hank Pernicka</span>
-                    <p class="">Principal Investigator</p>
+                    <span class="card-title">{{person.name}}</span>
+                    <p class="">{{person.role}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="mailto:{{person.email}}" target="_blank">Email</a>
                 </div>
             </div>
         </div>
-        <div class="col s12 l4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/images/profile2.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Damon Wendt</span>
-                    <p class="">Project Manager</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 l4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/images/profile2.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Pavel Galchenko</span>
-                    <p class="">Chief Engineer</p>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 <script>
@@ -84,10 +68,10 @@ layout: default
         function isElementInViewport(el) {
             var rect = el.getBoundingClientRect();
             return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
             );
         }
 
