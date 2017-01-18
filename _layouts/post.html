@@ -1,4 +1,8 @@
 ---
+# THIS IS THE POST LAYOUT. IT WAS FIRST CREATED FOR OUTREACH POSTS.
+# THE POST TITLE AND POST DATE (Month Day, Year) IS AUTOMATICALLY INSERTED, WITH MARKDOWN BEGINNING AFTER THE DATE.
+# AN IMAGE SLIDESHOW WILL APPEAR IF THERE ARE IMAGES LISTED IN THE POST FRONT MATTER.
+
 layout: default
 ---
 
@@ -7,7 +11,7 @@ layout: default
         <div class="col s12">
             <div class="card-panel tile z-depth-2">
                 <div class="tile-image-large">
-                    <img src="{{page.cover_image}}"/>
+                    <img src="{{ site.baseurl }}{{page.cover_image}}"/>
                 </div>
                 <div class="tile-content full">
                     <h3>{{page.title}}</h3>
@@ -20,7 +24,7 @@ layout: default
                         <ul class="slides">
                             {% for image in page.images %}
                             <li>
-                                <img src="{{image.file}}">
+                                <img src="{{ site.baseurl }}{{image.file}}">
                                 <div class="caption center-align">
                                     <h3>{{image.caption}}</h3>
                                 </div>

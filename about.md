@@ -2,10 +2,10 @@
 layout: about
 title: About
 permalink: /about/
-cover_image: '/images/space.jpg'
 ---
 
 ### Who we are
+
 We are the Missouri University of Science and Technology (Missouri S&T) satellite research team (M-SAT). M-SAT works in conjunction with a number of AFRL/NASA/industry mentors to design, construct, and launch small satellites. We are currently actively working on two projects; MR/MRS SAT and Cube Quest. The first project consists of two microsatellites, named MR SAT (Missouri-Rolla Satellite) and MRS SAT (Missouri-Rolla Second Satellite). The pair is launched together, and MR SAT will act as an inspector satellite while MRS SAT will simulate an uncooperative resident space object (RSO), with the two performing proximity operations during their flight. The second project, Cube Quest, is a part of NASA's Centennial Challenge Program. The team will be designing, constructing, and hopefully launching a cubesat about the size of a shoe box that will participate in NASA's Lunar Derby competition, where the ultimate goal is to orbit the Moon.
 
 The goals of the MR/MRS SAT project are to test new technologies in support of missions involving proximity operations, including the study of an R-134a-based cold gas propulsion system for use in formation flying applications and the development of a stereoscopic imager sensor used to determine the real-time relative position/velocity vectors between the satellite pair. Data obtained during the close formation flight phase of MR/MRS SAT will be evaluated for the benefit of future missions. Through the Lunar Derby, M-SAT also plans on overcoming the significant technological challenges of sending a cubesat to lunar orbit. As a result of the modest budget that accompanies a university level project; M-SAT requires the use of innovative, low-cost solutions to meet these objectives.
@@ -27,3 +27,6 @@ The purpose of the MR & MRS SAT mission is to provide flight testing of a stereo
 #### Technology Demonstrations
 * Stereoscopic imaging system designed in-house
 * Refrigerant-based cold gas propulsion system
+
+
+![MSAT-Team](/images/team.jpg){:class="responsive-img materialboxed"}

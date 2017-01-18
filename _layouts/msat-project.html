@@ -1,4 +1,9 @@
 ---
+# THIS IS THE MSAT-PROJECT LAYOUT AND PULLS ALL THE DATA IT NEEDS FROM _data/msat-projects.yml
+# IT USES THE PROJECT IMAGE AS THE PARAGRAPH COVER IMAGE.
+# IF THE THERE IS NO TIMELINE IN THE DATA FILE, IT WILL AUTOMATICALLY HIDE ITSELF.
+# IF THE THERE ARE NO PEOPLE IN THE DATA FILE, IT WILL AUTOMATICALLY HIDE THE PEOPLE.
+
 layout: default
 ---
 
@@ -6,8 +11,8 @@ layout: default
     <div class="row margin-top">
         <div class="col s12">
             <div class="card-panel tile z-depth-2">
-                <div class="tile-image-large">
-                    <img src="{{page.image}}"/>
+                <div class="tile-image-large cover-image">
+                    <img src="{{ site.baseurl }}{{page.cover_image}}"/>
                 </div>
                 <div class="tile-content full">
                     <div class="tile-title"><h4>{{ page.title }}</h4></div>
@@ -37,22 +42,24 @@ layout: default
         </div>
         {% endif %}
 
-        {% for person in page.people %}
-        <div class="col s12 l3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{person.image}}">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">{{person.name}}</span>
-                    <p class="">{{person.role}}</p>
-                </div>
-                <div class="card-action">
-                    <a href="mailto:{{person.email}}" target="_blank">Email</a>
+        {% if page.people %}
+            {% for person in page.people %}
+            <div class="col s12 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ site.baseurl }}{{person.image}}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{person.name}}</span>
+                        <p class="">{{person.role}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="mailto:{{person.email}}" target="_blank">Email</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        {% endif %}
     </div>
 </div>
 <script>

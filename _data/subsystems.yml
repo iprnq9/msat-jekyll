@@ -1,15 +1,119 @@
+- title: 'Command and Data Handling'
+  nickname: 'C&DH'
+  url: 'command-and-data-handling'
+  description: |
+    The Command and Data Handling (C&DH) subsystem is responsible for the communication and control of all processing modules used on board the spacecraft. The configuration of these modules forms a distributed, embedded real-time system. The classification of this system imposes significant constraints on the design and implementation of the developed software system. Throughout the design process, simulation and testing is performed to ensure a reliable, robust software system. The primary goal of our computer system design is to allow the spacecraft formation to operate without requiring attention from Missouri S&T ground controllers. The secondary goal is to provide reliable control mechanisms for the formation command and control of small spacecraft.
+
+  image: 'image/goes/here.png'
+  images:
+
+
 - title: 'Communications'
   nickname: 'COM'
   url: 'communications'
-  description: 'An effective communications system is an essential part of any satellites operation; and in the latest design from the Missouri S&T Satellite Team, it becomes a major feature. The current design will consist of two independently functioning satellites called MrSat and MrsSat. Once in orbit, the two satellites will separate from one another and remain in communication via a 2.4 GHz, Class 1 Bluetooth connection. The larger of the two, MrSat, will act as the ground link for the satellite system. The antennae for this link will use the UHF band for communication with the ground station, which will be based in Rolla.'
-  image: '/image/goes/here.png'
+  description: |
+      An effective communications system is an essential part of any satellites operation; and in the latest design from the Missouri S&T Satellite Team, it becomes a major feature. The current design will consist of two independently functioning satellites called MrSat and MrsSat. Once in orbit, the two satellites will separate from one another and remain in communication via a 2.4 GHz, Class 1 Bluetooth connection. The larger of the two, MrSat, will act as the ground link for the satellite system. The antennae for this link will use the UHF band for communication with the ground station, which will be based in Rolla.
+
+  image: 'image/goes/here.png'
   images:
-    - file: '/images/space.jpg'
-      caption: 'Caption for comm image'
-    - file: '/images/space.jpg'
-      caption: 'Caption for comm image2'
+    - file: 'images/subsystems/groundstation.png'
+      caption: ''
 
-- title: 'Command and Data Handling'
-  url: 'command-and-data-handling'
-  description: 'The Command and Data Handling (C&DH) subsystem is responsible for the communication and control of all processing modules used on board the spacecraft. The configuration of these modules forms a distributed, embedded real-time system. The classification of this system imposes significant constraints on the design and implementation of the developed software system. Throughout the design process, simulation and testing is performed to ensure a reliable, robust software system. The primary goal of our computer system design is to allow the spacecraft formation to operate without requiring attention from Missouri S&T ground controllers. The secondary goal is to provide reliable control mechanisms for the formation command and control of small spacecraft.'
 
+- title: 'Integration'
+  url: 'integration'
+  description: |
+    The purspose of the integration subsystem is to bring together all the subsystems. Each subsystem has different technologies and ideas, and these must be compatible with the overall design of the satellite. Integration also verifies that the design parameters and program requirement are met. Finally, complete assembly of the satellites is done to make sure the satellite actually fits together properly.  Since assembly of the satellite is performed in a clean room, Integration exchanges the clean room suits twice a semester.
+
+  image: 'image/goes/here.png'
+  images:
+
+
+- title: 'Power'
+  url: 'power'
+  description: |
+    The objectives of the power system are to acquire, store, and distribute power in a way that will sustain the operations of the mission. In order to achieve these objectives, a satellite power system must consist of the following components: a power generation system, an energy storage system, a power distribution system, and a power regulation system. Power will be provided to the spacecraft pair through the use of triple junction solar cells with the highest efficiency which can be obtained in sufficient quantity within budgetary constraints. Lithium-Ion (Li-ion) batteries will be base-lined as the nominal power source for use during high-load phases of the mission and during eclipse.
+
+  image: 'image/goes/here.png'
+  images:
+
+
+- title: 'Propulsion'
+  url: 'propulsion'
+  description: |
+    The main use of a propulsion system is to provide means to maneuver a satellite through space. This maneuvering is typically used for changing the orbit shape and size. A secondary use for the propulsion system is to provide a means for attitude control. Research was conducted to determine the propulsion options available to the M-SAT project leading to the identification of many types of propulsion systems. Most of these were not suitable for the M-SAT project due to size, mass, financial, or power requirements; however, several promising options for propulsion systems were found. After careful consideration, a cold gas thruster system with a two-phase propellant, saturated liquid R-134a, was pursued. Due to design limitations specified by the Nanosat-8 competition, specifically the use of pressure vessels and substances capable of phase changes, the use of R-134a required in-depth analysis and testing prior to it being accepted by AFRL.
+
+     ![](../../images/subsystems/prop_hardware1.png){:class="materialboxed float-right"}
+
+     Analysis of the performance characteristics of the R-134a propellant system concluded that is a very capable system for the M-SAT mission. The system is currently undergoing testing to ensure full functionality in the designed condition. Due to safety constraints placed on the M-SAT mission by the UNP-8 Users Guide, physical inhibits must be installed to minimize the risk of leaking propellant and possibly damaging the primary payload on the launch vehicle. As such, three solenoid valves, referred to as isolation valves are designed to isolate propellant from the thrusters and the regulator. A regulator is used such that the high tank pressure (100 psia) is regulated to the desired pressure for thrust at each thruster nozzle. The R-134a propellant is designed to be distributed to each of the 12 thruster solenoids, which can be operated electronically as needed. The figures to the right outline the layout of the general propulsion system, and show the complete propulsion system (minus the 12 thrusters) including the tank, three isolation valves, battery boxes, pressure transducers and propulsion bridge.
+
+    ![](../../images/subsystems/prop_hardware2.png){:class="materialboxed float-right"}
+
+    The operation of the thrusters and isolation valves will be autonomously controlled electrically via the Propulsion circuit board designed by the M-SAT team. This board will receive electronic commands determined by the proximity operations attitude control system developed by the ADAC and Orbit subsystems with the ability to command additional firings through a communication uplink. The propulsion system also consists of four pressure transducers, to ensure that the system is operating correctly during flight. The figure above shows the entirety of the propulsion hardware as it will be integrated on the bottom panel of the MR SAT spacecraft, including the location of the pressure transducers.
+
+    The large shell-like structures encasing the propulsion tank are actually the housing structures for the F-Cell batteries MR SAT will use in flight. This is the result of a unique design choice to house the batteries near the tank such that the waste heat from the batteries charging and discharging will be transferred to the propellant tank, which will help change the phase of the R-134a propellant from liquid to gas as it is expelled from the thrusters.
+
+    ![](../../images/subsystems/prop_hardware3.png){:class="materialboxed responsive-img float-center"}
+
+    ![](../../images/subsystems/prop_tank_simple.png){:class="materialboxed responsive-img float-center"}
+
+
+  image: 'image/goes/here.png'
+  images:
+    - file: 'images/subsystems/Regulator.jpg'
+      caption: ''
+    - file: 'images/subsystems/Tank.jpg'
+      caption: ''
+    - file: 'images/subsystems/Valve.jpg'
+      caption: ''
+    - file: 'images/subsystems/mPPT_Test.jpg'
+      caption: ''
+
+
+- title: 'Stereoscopic Imaging'
+  nickname: 'SI'
+  url: 'steroscopic-imaging'
+  description: |
+    Stereoscopic Imaging (SI) is a subsystem that is unique to the Nanosat-8 Project. The SI system utilizes two cameras mounted on the top surface of MR SAT which are used nearly-simultaneously to help guide MR SAT through its orbit and stay focused on a Resident Space Object (RSO), which is MRS SAT in this case. A stereoscopic imaging layout is similar to the human eye, in that it takes input from two different sources and helps determine relative distance from the body. MR SAT will be using the cameras to take pictures of MRS SAT after separation, combine those images using a Simulink algorithm utilizing an onboard computer, and then calculate angles with the objective of keeping MRS SAT in plain view of MR SAT at all times. A secondary objective of this subsystem is to take numerous photographs of the RSO during the circumnavigation mission mode of MR SAT and use those images to produce a 3-dimensional reconstruction of that RSO. An advantageous aspect of this system is that it requires low amounts of power and is a passive sensor, meaning that an RSO cannot detect that MR SAT is sensing it, as opposed to active sensors such as RADAR and LIDAR.
+  image: 'image/goes/here.png'
+  images:
+
+
+- title: 'Structures'
+  url: 'structures'
+  description: |
+    The Structures subsystem is responsible for the load-bearing body of the spacecraft. A sturdy structural design with sufficient capacity to carry all necessary components is essential to a spacecraft's mission success. It is also essential to limit the mass and size of the spacecraft in order to lower the costs associated with placing it in orbit. These primary constraints drive the overall structural design of most spacecraft. In January of 2011, the M-SAT design team was accepted into the University Nanosat-7 Competition. The constraints and requirements of this competition play a large role in the structural design.
+
+    A number of constraints have been developed for the execution of this project. These constraints include limiting total mass to less than 50 kg, and total size to dimensions within a cylindrical envelope of 60 cm diameter and 60 cm high. Additional mission goals include designing the two satellites to be mated during launch and to separate on orbit. The structure of MR SAT is in the shape of a hexagonal prism. MR SAT is the larger of the two satellites and is shown on the bottom of Figure 1.2 with the upper satellite depicting MRS SAT. Figure 1.2 shows the two satellites separated as they will be to initiate the formation flight sequence of the mission. The upper satellite (MRS SAT) will be wholly contained by the lower satellite (MR SAT) for launch and detumble. The largest and highest power consuming components will be placed in MR SAT, where there is more available space for solar cells. These components are notably the propulsion tank and the orbit to ground communication.
+
+    The structural design incorporated the requirement for ground support equipment with brackets that can be seen extending out of four of the corners of the two satellites. The mounting of the satellite to the launch vehicle can be seen in the round base plate on the bottom of MR SAT. This 1/4 inch plate will be connected to the launch vehicle using 24 bolted connections rigidly attaching the satellite to the Lightband system.
+
+    In designing the internal configuration, all component boxes will be mounted to the six side panels. The tank is attached to the bottom of the satellite and has tubing running throughout MR SAT. Four antennas are mounted to the honeycomb panels on MR SAT. MRS SAT's design is a cube shaped box with solar cells and dipole antennas fitted to each side. The docking mechanism between MR SAT and MRS SAT is an NEA quick-release bolt system. This will hold the two satellites together until the computer autonomously sends a signal to the three NEA mechanisms and separates the satellites. In order to meet mission requirements, the mass and size of the satellite must be minimized while strength and stiffness are maximized. The mass of the satellite will be maintained at a manageable level due to the lightweight materials used (aluminum isogrid panels, boxes, etc). The relatively small dimensions used will also lead to a high stiffness.
+
+    It is also the responsibility of the Structures subsystem to verify that the structure can withstand all loads that may be applied to it over its lifespan. For this reason a number of analyses including finite element, vibration effects, and thermal expansion effects are being performed.
+
+    Preliminary analyses were conducted initially for concept generation. This was followed by in-depth studies to determine if the detailed design will survive the loading and environmental conditions during launch. The various analyses to be completed include Finite Element Analysis, Mass Properties Analysis (masses, centroids, moments of inertia), and Vibration Effects Analysis. The current design is being analyzed to ensure it meets all of the requirements posed by the Nanosat-7 User's Guide and the mission requirements. Upon completion of the analysis, construction of the panels and component boxes will begin so physical test may be performed on the completed structure. Mass properties of the satellite are undergoing a revision after acquiring a better understanding of how the software computes the values. The vibration effects analysis is in progress with testing plans in place. Testing will also be necessary to verify the results of these analyses. Before completion of the project, the spa craft will undergo a series of tests to insure the structural integrity within the design limits and verify analyses results. Potential testing facilities have been sourced, and arrangements are currently underway to perform the required testing. Once the spacecraft has been assembled it will be tested and subjected to all the loads it is expected to undergo throughout its operational life, with particular focus on its ascent to orbit.
+
+  image: 'image/goes/here.png'
+  images:
+
+
+- title: 'Thermal'
+  url: 'thermal'
+  description: |
+    The objectives of the thermal subsystem are to thermally analyze MR and MRS SAT, to determine the safe working temperature range for the orbit specified, and to utilize methods that will ensure the thermal safety of both satellites over large temperature ranges and various environments. Temperature sensors are being installed, tested, and integrated into both satellites.
+
+    A finite element analysis program, NX, is being utilized to analyze the conduction and radiation of the satellites to estimate worst-case equilibrium temperatures. Convection can be ignored in space unless pressure modules or fluid loops are used because the mean free path between molecules in space is too great to allow for significant heat transfer. Nodes for the thermal analysis are governed by type and size of mesh applied for the analysis.
+
+    The design strategy is to concentrate on minimizing the effects of thermal deformations and stresses. This includes enclosing critical members in insulation to keep temperature gradients low, accounting for friction in sliding joints, using structural members with low coefficients of thermal expansion (CTE), designing joints that connect members of different materials, using materials with high thermal conductivity, and determining how temperature affects the strength of composite materials. A catalog of the thermal properties of each material used on the satellites has been made.
+
+    Batteries have a very small operating range, which makes them the most critical component for thermal control. As a result, the batteries will govern the allowable ranges for satellite temperature variation. The temperature throughout each satellite can be controlled, within limits, by using heat sinks, insulation, anodized aluminum, and coatings. By connecting the components within the satellite using conduction pathways, a nearly uniform temperature can be maintained.
+
+    The effects of the beta angle are being determined by analyzing orbits at different altitudes and orientation and studying differences in total heat or irradiation due to different sources such as the Sun, Earth, and albedo. Numerous thermal control methods are being studied for possible applications to the project. These include the use of conductive links to short all the parts of the satellite, black paints on the electronic boxes, FOSR radiators, conductive pastes, insulation, cooling system, and instruments that switch on when the satellite becomes too hot or too cold. Temperature sensors are required for the batteries, solar panels, camera, and CPU. Maxim/Dallas Semiconductor DS18B20 digital temperature sensors have been chosen for M-SAT.
+
+    Electronic components are being tested for functionality through low pressure and over a wide range of temperatures in an effort to identify any faulty hardware. Thermal barrier materials are being tested to determine what and how much is being used in the final design. The thermal sensing equipment will require calibration to ensure accurate readings. The final design will also be subjected to ground test in the thermal environment it is expected to endure on orbit. Effects of spin rate and orbital decay on the temperature of the satellite are being analyzed.
+
+    The responsibilities of the Thermal subsystem during operation include temperature monitoring and control. Temperature sensors will read the temperature variations of vital components while the satellite is in orbit. The onboard computer is able to analyze the data to ensure the satellite remains within its safe ranges and is capable of storing and sending data to the ground station for further analysis.
+
+  image: 'image/goes/here.png'
+  images:

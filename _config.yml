@@ -13,23 +13,53 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# Appears in tab title bar
 title: Missouri Satellite Research Team (M-SAT)
-email: your-email@domain.com
+
+#
+email: ajhq6c@mst.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  The Missouri Satellite Research Team at Missouri University of Science and Technology
+  designs, builds, and tests every aspect of a flight-ready satellite, each having its own
+  dedicated research mission.
+
+# The subpath of your site, e.g. /~mrsat (this comes after url like "web.mst.edu"):
+#  - For local testing (using localhost), use "/".
+#  - For actual deployment (on ~mrsat), use "/~mrsat/"
+baseurl: "/~iprnq9/"
+
+# The base hostname & protocol for your site, e.g. http://example.com
+# Currently, we won't need this with the way the website is built.
+# In the future, if used, it would be "http://web.mst.edu" assuming that's where the site is hosted.
+url: ""
+
+# Optional Items that can be accessed on the site, e.g. "site.github_username"
+# In fact, you can create whatever variables you wish to use throughout!
+# twitter_username:
+# github_username:
+
+# These defaults are what variables will take place if the Front Matter doesn't overwrite them.
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      cover_image: 'images/space.jpg' # The cover image at the top of paragraphs used throughtout
 
 # Build settings
 markdown: kramdown
 excerpt_separator: ""
 
-gems:
-  - jekyll-feed
+# Ruby add-ons
+# gems:
+
+# Force inclusion of directories and/or files in the conversion.
+# .htaccess is a good example since dotfiles are excluded by default.
+# include:
+
+# What files or directories to exclude from generated site.
 exclude:
   - Gemfile
   - Gemfile.lock

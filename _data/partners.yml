@@ -1,12 +1,63 @@
 - title: 'Missouri S&T'
-  logo: '/images/partners/MST_Logo.jpg'
+  logo: 'images/partners/MST_Logo.jpg'
   url: 'http://mst.edu'
-  text: |
-        The Missouri School of Mines and Metallurgy (MSM) was founded in 1870-- the first technological institution west of the Mississippi, and one of the first in the nation. A product of the Morrill Act of 1862 and the land-grant movement of the late nineteenth century, MSM was Missouri's response to the acute need for scientific and practical education in the developing nation. In inaugurating the School, President of the University of Missouri, Daniel Read, stated its purpose:
 
-        This school is to be a school both of science and of its applications: its purpose is to teach knowledge and art -- first to know and then to do, and to do in the best manner.
+
+- title: 'MAE Dept at Missouri S&T'
+  logo: 'images/partners/mae_mst.png'
+  url: 'http://mae.mst.edu'
+
+
+- title: 'UM System Research Board'
+  logo: 'images/partners/umsystem.png'
+  url: 'http://umsystem.edu'
+
+
+- title: 'Academy of Mechanical and Aerospace Engineers'
+  logo: 'images/partners/amae.jpg'
+  url: 'http://mae.mst.edu/department/distinguishedalumni/'
+
+
+- title: 'Helical Communication Technologies'
+  logo: 'images/partners/hct.png'
+  url: 'http://www.helicomtech.com/'
+
+
+- title: 'Ball Aerospace & Technologies Corporation'
+  logo: 'images/partners/ball.png'
+  url: 'http://www.ball.com/aerospace'
+
+
 - title: 'NASA'
-  logo: '/images/partners/NASA.png'
+  logo: 'images/partners/NASA.png'
   url: 'http://nasa.gov'
-  text: |
-        NASA stands for National Aeronautics and Space Administration. NASA is a United States government agency that is responsible for science and technology related to air and space. The Space Age started in 1957 with the launch of the Soviet satellite Sputnik. NASA was created in 1958. The agency was created to oversee U.S. space exploration and aeronautics research.
+
+
+- title: 'Sunstone Circuits'
+  logo: 'images/partners/sunstone.png'
+  url: 'http://sunstone.com'
+
+
+- title: 'Brewer Science'
+  logo: 'images/partners/brewer.gif'
+  url: 'http://brewerscience.com'
+
+
+- title: 'Advanced Circuits'
+  logo: 'images/partners/advanced_circuits.png'
+  url: 'http://4pcb.com'
+
+
+- title: 'Analytical Graphics, Inc'
+  logo: 'images/partners/agi.png'
+  url: 'http://agi.com'
+
+
+- title: 'Swagelok'
+  logo: 'images/partners/swagelok.jpg'
+  url: 'http://swagelok.com'
+
+- title: 'Moog, Inc'
+  logo: 'images/partners/moog.jpg'
+  url: 'http://moog.com'
+

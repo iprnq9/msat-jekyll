@@ -7,9 +7,14 @@ layout: default
         <div class="col s12">
             <div class="card-panel tile z-depth-2">
                 <div class="tile-image-large">
-                    <img src="{{page.cover_image}}"/>
+                    <img src="{{ site.baseurl }}{{page.cover_image}}"/>
                 </div>
                 <div class="tile-content full">
+                    <div class="tile-description center-align">
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="tile-content full hide">
                     <div class="tile-description">
                         {{content}}
                         <ul class="collection with-header center">
@@ -18,7 +23,7 @@ layout: default
                             {% for pub in pubs %}
                             <li class="collection-item">
                                 {% if pub.document %}
-                                <a href="{{pub.document}}" target="_blank" class="secondary-content"><i class="material-icons">file_download</i></a>
+                                <a href="{{ site.baseurl }}{{pub.document}}" target="_blank" class="secondary-content"><i class="material-icons">file_download</i></a>
                                 {% endif %}
                                 <div>{{pub.author}}, "{{pub.title}}," {% if pub.paper_number %} presented as paper {{pub.paper_number}} at
                                     the {{pub.organization}}, {% endif %} {% if pub.location %}{{pub.location}},{% endif %} {{pub.date}}.

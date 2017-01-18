@@ -1,11 +1,13 @@
 ---
+# Derive this layout from the default layout.
+# The content found below this Front Matter will be inserted on the default layout where it says {% content %}.
 layout: default
 ---
 
 {% if page.show_parallax contains 'True' %}
 <div class="parallax-container parallax-container-full">
     <div class="parallax">
-        <img src="{{page.parallax_image}}" />
+        <img src="{{ site.baseurl }}{{page.parallax_image}}" />
     </div>
 </div>
 {% endif %}
@@ -15,10 +17,10 @@ layout: default
         <h3 class="white-text">Ongoing Projects</h3>
         {% for project in site.data.msat-projects %}
             <div class="col s12 l4">
-                <a href="/projects/{{project.url}}.html">
+                <a href="{{ site.baseurl }}projects/{{project.url}}.html">
                     <div class="card-panel tile hoverable z-depth-1 h200">
                         <div class="tile-image-large">
-                            <img src="{{project.image}}" />
+                            <img src="{{ site.baseurl }}{{project.tile_image}}" />
                         </div>
                         <div class="tile-content">
                             <div class="tile-title">{{ project.title }}</div>

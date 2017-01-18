@@ -1,35 +1,44 @@
 ---
+# THIS IS THE PARTNERS LAYOUT. ALL PARTNERS FOUND IN _data/parnters.yml WILL BE DISPLAYED AUTOMATICALLY.
+# BELOW IS A BLANK DIV FOR MARKDOWN TO BE ADDED VIA partners.md.
+
 layout: default
-thanks_text: 'Thanks for making this all possible.'
+
+# This has two (really three) options:
+#  - "top" puts the paragraph about the partner tiles.
+#  - "bottom" puts the paragraph below the partner tiles.
+#  - Putting nothing ("") means it won't appear.
+paragraph_position: top
 ---
 
 <div class="container">
-    <div class="row margin-top">
-        {% for partner in site.data.partners %}
-        <div class="col s12 l4">
-            <div class="card sticky-action">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{partner.logo}}">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">
-                        {{partner.title}}<i class="material-icons right">more_vert</i>
-                    </span>
-                </div>
-                <div class="card-action">
-                    <a href="{{partner.url}}" target="_blank">View Site</a>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{partner.title}}<i class="material-icons right">close</i></span>
-                    <p>{{partner.text}}</p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+    {% if layout.paragraph_position contains 'top' %}
     <div class="row margin-top">
         <div class="card-panel white">
             {{content}}
         </div>
     </div>
+    {% endif %}
+    <div class="row margin-top">
+        {% for partner in site.data.partners %}
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ site.baseurl }}{{partner.logo}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{partner.title}}</span>
+                    <p><a href="{{partner.url}}" target="_blank">View Site</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if layout.paragraph_position contains 'bottom' %}
+    <div class="row margin-top">
+        <div class="card-panel white">
+            {{content}}
+        </div>
+    </div>
+    {% endif %}
 </div>

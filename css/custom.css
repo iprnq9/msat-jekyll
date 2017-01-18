@@ -52,6 +52,12 @@ main {
     overflow: hidden;
 }
 
+.cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 1000px;
+}
+
 .tile-image-large img {
     width: 100%;
     height: auto;
@@ -73,7 +79,7 @@ main {
 }
 
 .full {
-    max-height: 3000px;
+    max-height: 10000px;
 }
 
 .tile-title {
@@ -97,7 +103,7 @@ main {
     font-weight: bold;
 }
 
-.publication-list li{
+.publication-list li {
     margin-bottom: 35px;
     text-align: center;
 }
@@ -158,12 +164,11 @@ footer img {
     border-radius: 4px;
 }*/
 
-
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul {
-    background: ;
+    background:;
     padding: 50px 0;
 }
 
@@ -234,7 +239,6 @@ time {
     margin-bottom: 8px;
 }
 
-
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -266,7 +270,6 @@ time {
     opacity: 1;
 }
 
-
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -274,6 +277,7 @@ time {
     .timeline ul li div {
         width: 250px;
     }
+
     .timeline ul li:nth-child(even) div {
         left: -289px;
         /*250+45-6*/
@@ -284,12 +288,15 @@ time {
     .timeline ul li {
         margin-left: 20px;
     }
+
     .timeline ul li div {
         width: calc(100vw - 150px);
     }
+
     .timeline ul li:nth-child(even) div {
         left: 45px;
     }
+
     .timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
@@ -305,11 +312,11 @@ time {
 
 @font-face {
     font-family: 'Roboto Slab';
-    src: url('/fonts/RobotoSlab-Regular-webfont.eot');
-    src: url('/fonts/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/RobotoSlab-Regular-webfont.woff') format('woff'),
-         url('/fonts/RobotoSlab-Regular-webfont.ttf') format('truetype'),
-         url('/fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
+    src: url('../fonts/RobotoSlab-Regular-webfont.eot');
+    src: url('../fonts/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoSlab-Regular-webfont.woff') format('woff'),
+    url('../fonts/RobotoSlab-Regular-webfont.ttf') format('truetype'),
+    url('../fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -335,9 +342,39 @@ main .card-panel li, .card-panel li {
 }
 
 main ul.collection {
-  padding-left: 0px;
+    padding-left: 0px;
 }
 
 main li.collection-item {
-  list-style-type: none;
+    list-style-type: none;
 }
+
+.float-right {
+    float: right;
+    width: 30%;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.float-left {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.float-center {
+    margin: 0 auto;
+}
+@media only screen and (max-width: 992px) {
+    .float-right {
+        width: 100%;
+    }
+
+    .float-left {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,40 @@
+M-SAT Jekyll Site
+ |
+ |- _config.yml
+ |   |
+ |   |- Used as a settings file for site
+ |
+ |- site pages (index.md, about.md, etc)
+ |   |
+ |   |- Pages to be generated from Markdown
+ |
+ |- _data/
+ |   |
+ |   |- Data files (YML, JSON, or CSV)
+ | 
+ |- _layouts/
+ |   |
+ |   |- Templates for various page types (HTML)
+ |
+ |- _plugins/
+ |   |
+ |   |- Add-ons to give site more functionality
+ |
+ |- _posts/
+ |   |
+ |   |- Blog posts or the like written in Markdown
+ |
+ |- _site/
+ |   |
+ |   |- This is the static site created by Jekyll
+ |
+ |- css/
+ |- js/
+ |- fonts/
+ |- images/
+ |- documents/
+ |   |- These folders are automatically added to _site/ upon production and
+ |   |  can be used in the static site.
+ |
+ |- Miscellaneous files for Jekyll
+ 

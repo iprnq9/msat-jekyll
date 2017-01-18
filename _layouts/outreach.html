@@ -1,4 +1,7 @@
 ---
+# THIS IS THE OUTREACH LAYOUT.
+# IT SIMPLY LISTS ALL THE POSTS THAT HAVE A CATEGORY OF OUTREACH WITH THE MOST RECENT COMING FIRST.
+
 layout: default
 ---
 
@@ -6,13 +9,15 @@ layout: default
     <div class="row margin-top">
         <h3 class="white-text center-align">Our Outreach Events</h3>
         <div class="col s12 l8 push-l2">
-            {% for post in site.posts %}
+            {% for post in site.posts reversed %}
+            {% if post.category contains 'outreach' %}
             <a href="{{post.url}}">
                 <div class="card-panel black-text hoverable">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.date | date: '%B %d, %Y' }}</p>
                 </div>
             </a>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

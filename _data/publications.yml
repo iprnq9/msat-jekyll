@@ -1,5 +1,5 @@
-- title: 'The science behind how rockets fly and stuff'
-  author: 'Hank Pernicka'
+- title: 'Probabilistic Initial Relative Orbit Determination'
+  author: 'LeGrand, K., DeMars, K., and Pernicka, H.'
   date: 'January 11, 2017'
   year: '2017'
   location: 'San Antonio, TX'
@@ -7,7 +7,7 @@
   category: 'Conference Presentations'
   institution: 'Missouri University of Science and Technology'
   paper_number: 'AAS-123'
-  document: '/documents/file.pdf'
+  document: 'documents/file.pdf'
 
 - title: 'Fun times with awesome students'
   author: 'Hank Pernicka'
