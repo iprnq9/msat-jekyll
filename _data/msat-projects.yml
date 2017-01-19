@@ -37,8 +37,8 @@
 - title: 'Nanosat-9'
   url: 'nanosat-9'
   tagline: 'Testing a new multi-mode thruster system.'
-  tile_image: 'images/cube.jpg'
-  cover_image: 'images/cube.jpg'
+  tile_image: 'images/nanosat-9_cad.png'
+  cover_image: 'images/nanosat-9_cad.png'
   full_description: |
 
 
