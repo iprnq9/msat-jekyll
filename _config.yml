@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+encoding: utf-8
+
 # Appears in tab title bar
 title: Missouri Satellite Research Team (M-SAT)
 
@@ -25,7 +27,7 @@ description: > # this means to ignore newlines until "baseurl:"
 # The subpath of your site, e.g. /~mrsat (this comes after url like "web.mst.edu"):
 #  - For local testing (using localhost), use "/".
 #  - For actual deployment (on ~mrsat), use "/~mrsat/"
-baseurl: "/~iprnq9/"
+baseurl: "/~mrsat/"
 
 # The base hostname & protocol for your site, e.g. http://example.com
 # Currently, we won't need this with the way the website is built.
@@ -72,3 +74,4 @@ page_gen:
     template: 'subsystem'
     name: 'url'
     dir: 'subsystems'
+
