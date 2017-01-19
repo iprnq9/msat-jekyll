@@ -1,6 +1,6 @@
-- title: 'Nanosat-8'
-  url: 'nanosat-8'
-  tagline: 'Testing an imaging system to determine precise position of objects in space.'
+- title: 'MR & MRS SAT'
+  url: 'mr-mrs-sat'
+  tagline: 'Testing a stereoscopic imaging system to digitally reconstruct a partner satellite.'
   tile_image: 'images/nanosat-8.png'
   cover_image: 'images/nanosat-8_cover.png'
   full_description: |
@@ -12,12 +12,14 @@
     universities. At the review in January 2015, the M-SAT team was awarded first place.
 
   timeline:
-    - date: 'January 2016'
-      text: 'Important thing happened.'
-    - date: 'July 2016'
-      text: 'Working on stuff.'
-    - date: 'December 2016'
-      text: 'Awesome stuff is done!'
+    - date: 'January 2015'
+      text: 'M-SAT wins the Nanosat-8 competition.'
+    - date: 'January 2015'
+      text: 'M-SAT wins the Nanosat-8 competition.'
+    - date: 'January 2017'
+      text: 'Pre-Integration Review (PIR)'
+    - date: 'Early 2018'
+      text: 'Flight-ready satellite is completed and shipped to AFRL.'
 
   people:
      - role: 'Principal Investigator'
@@ -34,27 +36,33 @@
        image: 'images/profile2.jpg'
 
 
-- title: 'Nanosat-9'
-  url: 'nanosat-9'
-  tagline: 'Testing a new multi-mode thruster system.'
-  tile_image: 'images/nanosat-9_cad.png'
-  cover_image: 'images/nanosat-9_cad.png'
+- title: 'APEX'
+  url: 'apex'
+  tagline: 'Demonstrating a new multi-mode propulsion system that is being developed at Missouri S&T.'
+  tile_image: 'images/nanosat-9.png'
+  cover_image: 'images/nanosat-9_cover.png'
   full_description: |
+    APEX (Advanced Propulsion Experiment) is apart of the next iteration of the USAF Research Lab’s
+    University Nanosat Program, or Nanosat-9. M-SAT joined Nanosat-9 in January of 2016. APEX is to
+    be a 3U satellite that will perform several orbital maneuvers in LEO, demonstrating a new multi-mode
+    propulsion system that is being developed by a professor at Missouri S&T. While MR & MRS SAT are
+    currently in Phase B of the Nanosat program, and thus are technically out of competition, APEX is just
+    starting Phase A and is in direct competition with many other leading universities across the United
+    States.
 
-
-#  timeline:
-#    - date: 'January 2016'
-#      text: 'Important thing happened.'
-#    - date: 'July 2016'
-#      text: 'Working on stuff.'
-#    - date: 'December 2016'
-#      text: 'Awesome stuff is done!'
+  timeline:
+    - date: 'January 2016'
+      text: 'M-SAT joins the Nanosat-9 competition.'
+    - date: 'January 2017'
+      text: 'Preliminary Design Review for APEX'
+    - date: 'August 2017'
+      text: 'SmallSat Conference'
 
   people:
      - role: 'Principal Investigator'
        name: 'Dr. Hank Pernicka'
        email: 'pernicka@mst.edu'
-       image: 'images/profile2.jpg'
+       image: 'images/drp.jpg'
      - role: 'Program Manager'
        name: 'Shannah Maser'
        email: 'snwmv8@mst.edu'

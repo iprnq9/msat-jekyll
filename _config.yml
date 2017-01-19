@@ -20,9 +20,7 @@ title: Missouri Satellite Research Team (M-SAT)
 #
 email: ajhq6c@mst.edu
 description: > # this means to ignore newlines until "baseurl:"
-  The Missouri Satellite Research Team at Missouri University of Science and Technology
-  designs, builds, and tests every aspect of a flight-ready satellite, each having its own
-  dedicated research mission.
+  M-SAT (Missouri S&T Satellite Research Team) is a research group located at Missouri S&T. M-SAT is dedicated to designing, building, and flying small satellites. While it serves as the space-oriented senior design, it is also made up of graduate and undergraduates students of all majors.
 
 # The subpath of your site, e.g. /~mrsat (this comes after url like "web.mst.edu"):
 #  - For local testing (using localhost), use "/".

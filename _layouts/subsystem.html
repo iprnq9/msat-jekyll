@@ -16,6 +16,15 @@ layout: default
                         <p>{{ page.description | markdownify}}</p>
                     </div>
                     {% if page.images %}
+                    <div class="row">
+                        {% for image in page.images %}
+                        <div class="col s4 l1 center-align">
+                            <img src="{{site.baseurl}}{{image.file}}" class="responsive-img materialboxed"/>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% if page.images %}
                     <div class="slider">
                         <ul class="slides">
                             {% for image in page.images %}

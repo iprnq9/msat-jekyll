@@ -43,22 +43,24 @@ layout: default
         {% endif %}
 
         {% if page.people %}
-            {% for person in page.people %}
-            <div class="col s12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ site.baseurl }}{{person.image}}">
-                    </div>
+        {% for person in page.people %}
+        <div class="col s12 l4">
+            <div class="card horizontal">
+                <div class="card-image stripe">
+                    &nbsp;
+                </div>
+                <div class="card-stacked">
                     <div class="card-content">
-                        <span class="card-title">{{person.name}}</span>
-                        <p class="">{{person.role}}</p>
+                        <h4>{{person.name}}</h4>
+                        <p>{{person.role}}</p>
                     </div>
                     <div class="card-action">
                         <a href="mailto:{{person.email}}" target="_blank">Email</a>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+        </div>
+        {% endfor %}
         {% endif %}
     </div>
 </div>
