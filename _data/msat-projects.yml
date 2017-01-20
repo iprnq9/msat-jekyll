@@ -4,8 +4,11 @@
   tile_image: 'images/nanosat-8.png'
   cover_image: 'images/nanosat-8_cover.png'
   full_description: |
-    The goals of the MR/MRS SAT project are to test new technologies in support of missions involving proximity operations,
-    including the study of an R-134a-based cold gas propulsion system for use in formation flying applications and the development of a stereoscopic imager sensor used to determine the real-time relative position/velocity vectors between the satellite pair. Data obtained during the close formation flight phase of MR/MRS SAT will be evaluated for the benefit of future missions. Through the Lunar Derby, M-SAT also plans on overcoming the significant technological challenges of sending a cubesat to lunar orbit. As a result of the modest budget that accompanies a university level project; M-SAT requires the use of innovative, low-cost solutions to meet these objectives.
+    The goals of the MR & MRS SAT project are to test new technologies in support of missions involving proximity operations,
+    including the study of an R-134a-based cold gas propulsion system for use in formation flying applications and the development of a
+    stereoscopic imager sensor used to determine the real-time relative position/velocity vectors between the satellite pair. Data obtained during
+    the close formation flight phase of MR & MRS SAT will be evaluated for the benefit of future missions. Through the Lunar Derby, M-SAT also
+    plans on overcoming the significant technological challenges of sending a cubesat to lunar orbit. As a result of the modest budget that accompanies a university level project; M-SAT requires the use of innovative, low-cost solutions to meet these objectives.
 
     The M-SAT Team was accepted into the Nanosat-8 student competition in December 2012 with an official start date of January 2013. Nanosat-8 was
     sponsored by the Air Force and required that the team's spacecraft be completed by January 2015 for a final competition review with nine other
