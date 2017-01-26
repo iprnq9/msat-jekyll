@@ -131,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2%;
     height: 88%;
     width: auto;
+    max-height: 58px;
 }
 
 .float-right {
@@ -168,7 +169,7 @@ footer img {
 
 .timeline ul {
     background:;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .timeline ul li {
@@ -272,7 +273,7 @@ time {
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
     .timeline ul li div {
         width: 250px;
     }
@@ -283,13 +284,13 @@ time {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     .timeline ul li {
         margin-left: 20px;
     }
 
     .timeline ul li div {
-        width: calc(100vw - 150px);
+        width: calc(70vw);
     }
 
     .timeline ul li:nth-child(even) div {
@@ -299,7 +300,7 @@ time {
     .timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent #FCCD09 transparent transparent;
+        border-color: transparent #04793F transparent transparent;
     }
 }
 

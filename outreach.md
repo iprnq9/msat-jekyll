@@ -11,10 +11,10 @@ The role of our M-SAT Outreach is to excite grades K-12 about the wonders of spa
 
 We understand that the youth of today are the scientists, leaders, and engineers of tomorrow, and want to play a role in fostering a passion for space exploration and advancement.
 
-![alt text](/~iprnq9/images/outreach/outreach1.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
-![alt text](/~iprnq9/images/outreach/outreach2.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
-![alt text](/~iprnq9/images/outreach/outreach3.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
-![alt text](/~iprnq9/images/outreach/outreach4.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
-![alt text](/~iprnq9/images/outreach/outreach5.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
-![alt text](/~iprnq9/images/outreach/outreach6.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach1.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach2.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach3.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach4.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach5.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
+![alt text](/~mrsat/images/outreach/outreach6.jpg "Logo Title Text 1"){: class="responsive-img materialboxed float-center margin-top"}
 

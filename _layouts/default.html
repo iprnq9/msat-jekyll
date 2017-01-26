@@ -17,7 +17,7 @@ favicon: images/logo/favicon.png
 
 # Some browsers (such as Chrome on mobile) support this feature. Simply adds a color to the browser window.
 # This is a green color in hex. Don't include the # as it's already included.
-theme_color: 43a047
+theme_color: 212121
 ---
 
 <html>
@@ -31,8 +31,7 @@ theme_color: 43a047
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta charset="utf-8">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
 
     <!--Pulls favicon (browser tab icon) -->
     <link rel="icon" type="image/png" href="{{ site.baseurl }}{{ layout.favicon }}">
@@ -55,6 +54,11 @@ theme_color: 43a047
         <li><a href="{{ site.baseurl }}subsystems/{{subsystem.url}}.html">{{subsystem.title}}</a></li>
         {% endfor %}
     </ul>
+    <ul id="repo-dropdown" class="dropdown-content" style="margin-top: 64px;">
+        {% for project in site.data.msat-projects %}
+        <li><a href="{{project.repo_url}}" target="_blank">{{project.title}}</a></li>
+        {% endfor %}
+    </ul>
     <nav class="grey darken-4">
         <div class="nav-wrapper">
             <a href="{{ site.baseurl }}" class="slab brand-logo"><img src="{{ site.baseurl }}{{layout.nav_logo}}"
@@ -69,13 +73,17 @@ theme_color: 43a047
                 <li><a href="{{ site.baseurl }}outreach/">Outreach</a></li>
                 <li><a href="{{ site.baseurl }}partners/">Partners</a></li>
                 <li><a href="{{ site.baseurl }}about/">About</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="repo-dropdown">Repo Access<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li><a href="{{ site.baseurl }}">Home</a></li>
                         <li class="bold"><a class="collapsible-header waves-effect waves-blue">Subsystems</a>
-                            <div class="collapsible-body">
+                            <div class="collapsible-body grey lighten-4">
                                 <ul>
                                     {% for subsystem in site.data.subsystems %}
                                     <li><a href="{{ site.baseurl }}subsystems/{{subsystem.url}}.html">{{subsystem.title}}</a>
@@ -88,6 +96,15 @@ theme_color: 43a047
                         <li><a href="{{ site.baseurl }}outreach/">Outreach</a></li>
                         <li><a href="{{ site.baseurl }}partners/">Partners</a></li>
                         <li><a href="{{ site.baseurl }}about/">About</a></li>
+                        <li class="bold"><a class="collapsible-header waves-effect">Repo Access</a>
+                            <div class="collapsible-body grey lighten-4">
+                                <ul>
+                                    {% for project in site.data.msat-projects %}
+                                    <li><a href="{{project.repo_url}}" target="_blank">{{project.title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </li>
             </ul>

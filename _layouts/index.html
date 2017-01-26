@@ -35,3 +35,13 @@ layout: default
         {{content}}
     </div>
 </div>
+
+<script>
+    // Hide parallax on Firefox because it freaks out unfortunately
+    // Javascript
+	var FIREFOX = /Firefox/i.test(navigator.userAgent);
+
+	if (FIREFOX) {
+	  $('.parallax-container').addClass('hide');
+	}
+</script>
