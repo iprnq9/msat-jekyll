@@ -4,32 +4,44 @@
 layout: default
 ---
 
+
 {% if page.show_parallax contains 'True' %}
-<div class="parallax-container parallax-container-full">
+<div class="parallax-container">
+    <div class="caption center-align">
+        <h3 class="white-text">Satellites are like Buzz Lightyear</h3>
+        <h5 class="light grey-text text-lighten-3">They fall with style.</h5>
+    </div>
     <div class="parallax">
-        <img src="{{ site.baseurl }}{{page.parallax_image}}" />
+        <img src="{{ site.baseurl }}{{page.parallax_image}}"/>
     </div>
 </div>
 {% endif %}
 
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+
+</script>
+
 <div class="container">
-    <div class="row margin-top">
-        <h3 class="white-text">Ongoing Projects</h3>
+    <h3 class="white-text">Ongoing Projects</h3>
+    <div class="row margin-top flex-height">
         {% for project in site.data.msat-projects %}
         {% if project.ongoing %}
-            <div class="col s12 l4">
-                <a href="{{ site.baseurl }}projects/{{project.url}}.html">
-                    <div class="card-panel tile hoverable z-depth-1 h200">
-                        <div class="tile-image-large">
-                            <img src="{{ site.baseurl }}{{project.tile_image}}" />
-                        </div>
-                        <div class="tile-content">
-                            <div class="tile-title">{{ project.title }}</div>
-                            <div class="tile-description">{{ project.tagline }}</div>
-                        </div>
+        <div class="col s12 l4 flex-item flex-height">
+            <a href="{{ site.baseurl }}projects/{{project.url}}.html">
+                <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
+                    <div class="tile-image-large">
+                        <img src="{{ site.baseurl }}{{project.tile_image}}"/>
                     </div>
-                </a>
-            </div>
+                    <div class="tile-content">
+                        <div class="tile-title">{{ project.title }}</div>
+                        <div class="tile-description">{{ project.tagline }}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
         {% endif %}
         {% endfor %}
     </div>
@@ -39,11 +51,15 @@ layout: default
 </div>
 
 <script>
+
+</script>
+
+<script>
     // Hide parallax on Firefox because it freaks out unfortunately
     // Javascript
-	var FIREFOX = /Firefox/i.test(navigator.userAgent);
+    var FIREFOX = /Firefox/i.test(navigator.userAgent);
 
-	if (FIREFOX) {
-	  $('.parallax-container').addClass('hide');
-	}
+    if (FIREFOX) {
+        $('.parallax-container').addClass('hid');
+    }
 </script>

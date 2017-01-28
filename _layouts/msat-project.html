@@ -15,15 +15,17 @@ layout: default
                     <img src="{{ site.baseurl }}{{page.cover_image}}"/>
                 </div>
                 <div class="tile-content full">
-                    <div class="tile-title"><h4>{{ page.title }}</h4></div>
+                    <div class="tile-title"><h4>{{ page.title }} &middot; {{ page.competition }}</h4></div>
                     <div class="tile-description">
                         <p>{{ page.full_description | markdownify }}</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        {% if page.timeline %}
+    {% if page.timeline %}
+    <div class="row margin-top">
         <div class="col s12">
             <div class="">
                 <h4 class="white-text center-align">{{ page.title }}&nbsp;Timeline</h4>
@@ -40,29 +42,32 @@ layout: default
                 </section>
             </div>
         </div>
-        {% endif %}
+    </div>
+    {% endif %}
 
-        {% if page.people %}
-        {% for person in page.people %}
-        <div class="col s12 l4">
-            <div class="card horizontal">
-                <div class="card-image stripe">
-                    &nbsp;
+    {% if page.people %}
+    <div class="row margin-top flex-height">
+    {% for person in page.people %}
+    <div class="col s12 l4 flex-item flex-height">
+        <div class="card horizontal flex-item">
+            <div class="card-image stripe">
+                &nbsp;
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h4>{{person.name}}</h4>
+                    <p>{{person.role}}</p>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4>{{person.name}}</h4>
-                        <p>{{person.role}}</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="mailto:{{person.email}}" target="_blank">Email</a>
-                    </div>
+                <div class="card-action">
+                    <a href="mailto:{{person.email}}" target="_blank">Email</a>
                 </div>
             </div>
         </div>
-        {% endfor %}
-        {% endif %}
     </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+</div>
 </div>
 <script>
     (function () {

@@ -12,12 +12,23 @@ body {
     background-color: #424242;
 }
 
-main {
-    flex: 1 0 auto;
+header {
+    order: 1;
 }
 
-.parallax-container-full {
-    height: calc(100% - 65px);
+main {
+    order: 2;
+}
+
+footer {
+    order: 3;
+}
+
+.caption {
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    width: 100%;
 }
 
 .parallax-container-partial {
@@ -49,6 +60,7 @@ main {
     width: 100%;
     max-height: 200px;
     overflow: hidden;
+    background: black;
 }
 
 .cover-image {
@@ -375,6 +387,21 @@ main li.collection-item {
 
     .float-left {
         width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .flex-height {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .flex-item {
+        flex-grow: 1;
     }
 }
 

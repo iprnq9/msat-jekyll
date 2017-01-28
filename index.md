@@ -2,7 +2,7 @@
 layout: index
 title: Home
 show_parallax: 'True'
-parallax_image: 'images/parallax/parallax_earth.jpg'
+parallax_image: 'images/parallax/parallax_earth_small.jpg'
 ---
 
 ### Welcome

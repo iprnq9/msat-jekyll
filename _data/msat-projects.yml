@@ -1,5 +1,6 @@
 - title: 'MR & MRS SAT'
   url: 'mr-mrs-sat'
+  competition: 'Nanosat-8'
   ongoing: true
   competition: 'Nanosat-8'
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-8/'
@@ -50,6 +51,7 @@
 
 - title: 'APEX'
   url: 'apex'
+  competition: 'Nanosat-9'
   ongoing: true
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-9/'
   tagline: 'Demonstrating a new multi-mode propulsion system that is being developed at Missouri S&T.'
@@ -78,7 +80,7 @@
        email: 'pernicka@mst.edu'
        image: 'images/drp.jpg'
      - role: 'Program Manager'
-       name: 'Shannah Maser'
+       name: 'Shannah Withrow-Maser'
        email: 'snwmv8@mst.edu'
        image: 'images/profile3.png'
      - role: 'Chief Engineer'
@@ -86,3 +88,44 @@
        email: 'knsq44@mst.edu'
        image: 'images/profile2.jpg'
 
+
+- title: 'M&sup3;'
+  url: 'm-3'
+  competition: 'USIP'
+  ongoing: true
+  repo_url: 'https://svn.mst.edu/research/mrsat/trunk/USIP/'
+  tagline: 'Our newest project works to integrate a new multi-mode thruster into a 3U CubeSat.'
+  tile_image: 'images/logo/msat_logo_old2_padding.png'
+  cover_image: 'images/logo/msat_logo_old_padding.png'
+  full_description: |
+    The Undergraduate Student Instrument Project (USIP) is a part of the NASA Science Mission Directorate intended to challenge US universities to develop their technical and project management skills. The Multi-Mode Mission M&sup3; project will integrate the experimental thruster, being developed by the Missouri S&T Advanced Plasma Lab, into a 3U CubeSat structure in order to get in-flight performance data. The project is working towards it's Preliminary Design Review in April.
+
+  timeline:
+    - date: 'September 2016'
+      text: 'M-SAT joins the Undergraduate Student Instrument Project (USIP)'
+    - date: 'November 2016'
+      text: 'Requirements Review'
+    - date: 'April 2017'
+      text: 'Preliminary Design Review (PDR)'
+    - date: 'October 2017'
+      text: 'Critical Design Review (CDR)'
+    - date: 'December 2017'
+      text: 'Range Readiness Review (RRR)'
+    - date: 'January 2018'
+      text: 'Flight Readiness Review (FRR)'
+    - date: 'March 2018'
+      text: 'Flight Capability'
+
+  people:
+     - role: 'Principal Investigator'
+       name: 'Dr. Hank Pernicka'
+       email: 'pernicka@mst.edu'
+       image: 'images/drp.jpg'
+     - role: 'Program Manager'
+       name: 'Matthew Klosterman'
+       email: 'matthew.klosterman@mst.edu'
+       image: 'images/profile3.png'
+     - role: 'Chief Engineer'
+       name: 'Jonathan Rasche'
+       email: 'jdrnr5@mst.edu'
+       image: 'images/profile2.jpg'
