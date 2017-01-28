@@ -4,7 +4,7 @@
 
 # Appears only in the footer of every page.
 # Be sure to leave a space at the end as it's followed up with the site.email.
-footer_tagline: If you're interested in joining or have questions, feel free to contact us at
+footer_tagline: If you're interested in joining or have questions, feel free to contact Aaron Hensley at
 
 # The logo found in the header/navigation bar of every page.
 nav_logo: images/logo/msat_logo_old2.png
@@ -20,7 +20,7 @@ favicon: images/logo/favicon.png
 theme_color: 212121
 ---
 
-<html>
+<html lang="en">
 <head>
     <title>
         {% if page.title %}
@@ -55,6 +55,13 @@ theme_color: 212121
         <li><a href="{{ site.baseurl }}subsystems/{{subsystem.url}}.html">{{subsystem.title}}</a></li>
         {% endfor %}
     </ul>
+    <ul id="projects-dropdown" class="dropdown-content" style="margin-top: 64px;">
+        {% for project in site.data.msat-projects %}
+        {% if project.ongoing %}
+        <li><a href="{{ site.baseurl }}projects/{{project.url}}.html">{{project.title}}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
     <ul id="repo-dropdown" class="dropdown-content" style="margin-top: 64px;">
         {% for project in site.data.msat-projects %}
         <li><a href="{{project.repo_url}}" target="_blank">{{project.title}}</a></li>
@@ -66,14 +73,16 @@ theme_color: 212121
                                                                       class="logo"/></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
+                <li><a href="{{ site.baseurl }}about/">About</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="projects-dropdown">Projects<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-button" href="#!" data-activates="subsystems-dropdown">Subsystems<i
                         class="material-icons right">arrow_drop_down</i></a>
                 </li>
-                <li><a href="{{ site.baseurl }}publications/">Publications</a></li>
                 <li><a href="{{ site.baseurl }}outreach/">Outreach</a></li>
-                <li><a href="{{ site.baseurl }}partners/">Partners</a></li>
-                <li><a href="{{ site.baseurl }}about/">About</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-button" href="#!" data-activates="repo-dropdown">Repo Access<i
                         class="material-icons right">arrow_drop_down</i></a>
@@ -83,6 +92,16 @@ theme_color: 212121
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li><a href="{{ site.baseurl }}">Home</a></li>
+                        <li><a href="{{ site.baseurl }}about/">About</a></li>
+                        <li class="bold"><a class="collapsible-header waves-effect">Projects</a>
+                            <div class="collapsible-body grey lighten-4">
+                                <ul>
+                                    {% for project in site.data.msat-projects %}
+                                    <li><a href="{{ site.baseurl }}projects/{{project.url}}.html">{{project.title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
                         <li class="bold"><a class="collapsible-header waves-effect waves-blue">Subsystems</a>
                             <div class="collapsible-body grey lighten-4">
                                 <ul>
@@ -93,10 +112,7 @@ theme_color: 212121
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="{{ site.baseurl }}publications/">Publications</a></li>
                         <li><a href="{{ site.baseurl }}outreach/">Outreach</a></li>
-                        <li><a href="{{ site.baseurl }}partners/">Partners</a></li>
-                        <li><a href="{{ site.baseurl }}about/">About</a></li>
                         <li class="bold"><a class="collapsible-header waves-effect">Repo Access</a>
                             <div class="collapsible-body grey lighten-4">
                                 <ul>
@@ -133,8 +149,8 @@ theme_color: 212121
                 <h5 class="white-text">Quick Links</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="{{ site.baseurl }}publications/">Publications</a></li>
-                    <li><a class="grey-text text-lighten-3" href="{{ site.baseurl }}outreach/">Outreach</a></li>
                     <li><a class="grey-text text-lighten-3" href="{{ site.baseurl }}partners/">Partners</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{{ site.baseurl }}outreach/">Outreach</a></li>
                     <li><a class="grey-text text-lighten-3" href="{{ site.baseurl }}about/">About</a></li>
                 </ul>
             </div>
@@ -162,5 +178,6 @@ theme_color: 212121
         $('.materialboxed').materialbox();
     });
 </script>
+
 </body>
 </html>

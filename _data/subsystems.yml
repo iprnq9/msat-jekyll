@@ -1,4 +1,4 @@
-- title: 'Command and Data Handling'
+- title: 'Command & Data Handling'
   nickname: 'C&DH'
   url: 'command-and-data-handling'
   description: |
@@ -19,12 +19,15 @@
     The communications system of a spacecraft is one of the most critical pieces of hardware. The communication system of any modern satellite is responsible for any data sent to and from said satellite. Without the communication system, a satellite essentially becomes space debris. Failure of the communications
     system will almost always cause mission failure for nearly any satellite regardless of the state of any other system. Alternatively, failure of the communications system to process communications received by the satellite could stall or end a mission, as the satellite fails to receive vital instructions. In the interests of mission success, it is critical that the ability for the satellite to receive and especially transmit information be maintained. The nature of the small satellite community also means that it is important that the communication system be both low-cost and reliable.
 
-    The MR & MRS SAT spacecraft requires two separate communication systems, as there is no data link between the two craft post-separation. The MR SAT communication system utilizes two radios to facilitate a full-duplex connection with the ground. The two radios used operate on the UHF and VHF amateur radio bands. Using a full-duplex system prevents any accidental transmitter locks by allowing a reset command to be sent to the satellite at any time during ground connection. The MRS SAT spacecraft utilizes a radio that communicates with the GlobalStar network to allow for simplex communication to the ground. The primary purpose of MRS SAT is to simulate a non-cooperative resident space object (RSO) or space debris. The nal component of the communication system is the ground station. A ground station is required to receive telemetry and send commands to the satellite.
+    The MR & MRS SAT spacecraft requires two separate communication systems, as there is no data link between the two craft post-separation. The MR
+     SAT communication system utilizes two radios to facilitate a full-duplex connection with the ground. The two radios used operate on the UHF
+     and VHF amateur radio bands. Using a full-duplex system prevents any accidental transmitter locks by allowing a reset command to be sent to
+     the satellite at any time during ground connection. The MRS SAT spacecraft utilizes a radio that communicates with the GlobalStar network to allow for simplex communication to the ground. The primary purpose of MRS SAT is to simulate a non-cooperative resident space object (RSO) or space debris. The finnal component of the communication system is the ground station. A ground station is required to receive telemetry and send commands to the satellite.
   image: 'image/goes/here.png'
   images:
 
 
-- title: 'Guideance, Navigation, & Control'
+- title: 'Guidance, Navigation, & Control'
   nickname: 'GNC'
   url: 'guidance-navigation-control'
   description: |
@@ -42,6 +45,9 @@
 
   image: 'image/goes/here.png'
   images:
+
+- title: 'Payload'
+  url: 'payload'
 
 
 - title: 'Power'

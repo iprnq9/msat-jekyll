@@ -1,5 +1,7 @@
 - title: 'MR & MRS SAT'
   url: 'mr-mrs-sat'
+  ongoing: true
+  competition: 'Nanosat-8'
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-8/'
   tagline: 'Testing a stereoscopic imaging system to digitally reconstruct a partner satellite.'
   tile_image: 'images/nanosat-8.png'
@@ -48,6 +50,7 @@
 
 - title: 'APEX'
   url: 'apex'
+  ongoing: true
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-9/'
   tagline: 'Demonstrating a new multi-mode propulsion system that is being developed at Missouri S&T.'
   tile_image: 'images/nanosat-9.png'

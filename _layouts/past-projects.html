@@ -14,9 +14,9 @@ layout: default
 
 <div class="container">
     <div class="row margin-top">
-        <h3 class="white-text">Ongoing Projects</h3>
+        <h3 class="white-text">Past Projects</h3>
         {% for project in site.data.msat-projects %}
-        {% if project.ongoing %}
+        {% if project.ongoing == false %}
             <div class="col s12 l4">
                 <a href="{{ site.baseurl }}projects/{{project.url}}.html">
                     <div class="card-panel tile hoverable z-depth-1 h200">
@@ -32,9 +32,6 @@ layout: default
             </div>
         {% endif %}
         {% endfor %}
-    </div>
-    <div class="row margin-top card-panel white">
-        {{content}}
     </div>
 </div>
 
