@@ -410,3 +410,19 @@ main li.collection-item {
     background-color: #FFCF06;
 }
 
+.shift-up {
+    margin-top: -350px;
+    margin-bottom: 105px;
+}
+
+.shift-down {
+    margin-top: 55vh;
+}
+
+.big-text p {
+    font-size: 14pt;
+}
+
+p {
+    font-size: 13pt;
+}

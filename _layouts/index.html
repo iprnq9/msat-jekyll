@@ -11,17 +11,26 @@ layout: default
         <h3 class="white-text">Satellites are like Buzz Lightyear</h3>
         <h5 class="light grey-text text-lighten-3">They fall with style.</h5>
     </div>
+
+    <div class="container">
+        <div class="row  margin-top shift-down">
+            <div class="col s12 l10 push-l1 card-panel white big-text">
+                {{content}}
+            </div>
+        </div>
+    </div>
+
     <div class="parallax">
         <img src="{{ site.baseurl }}{{page.parallax_image}}"/>
     </div>
 </div>
 {% endif %}
 
+
 <script>
     $(document).ready(function () {
         $('.parallax').parallax();
     });
-
 </script>
 
 <div class="container">
@@ -29,7 +38,7 @@ layout: default
     <div class="row margin-top flex-height">
         {% for project in site.data.msat-projects %}
         {% if project.ongoing %}
-        <div class="col s12 l4 flex-item flex-height">
+        <div class="col s10 push-s1 l4 flex-item flex-height">
             <a href="{{ site.baseurl }}projects/{{project.url}}.html">
                 <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
                     <div class="tile-image-large">
@@ -45,11 +54,8 @@ layout: default
         {% endif %}
         {% endfor %}
     </div>
-    <div class="row margin-top card-panel white">
-        {{content}}
-    </div>
+    <h3 class="white-text">Upcoming Events</h3>
     <div class="row margin-top calendar-events">
-        <h3 class="center-align white-text">Here's What's Up Next:</h3>
     </div>
 </div>
 
@@ -73,7 +79,7 @@ layout: default
     var api_key = "AIzaSyBMWU0hcTVS9492xkBcyvIfK6fblhiFhMc";
     var calendar_id = "mst.edu_jf6ajjf63sjl899fm9sq18pkl8@group.calendar.google.com";
     //var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
-    var num_events = 2;
+    var num_events = 4;
     var d = new Date();
     var date = d.toISOString();
     //console.log(date);
@@ -95,11 +101,15 @@ layout: default
                 hour: '2-digit',
                 minute: '2-digit'
             });
-            ;
+            var end_time = new Date(events[index].end.dateTime).toLocaleTimeString(navigator.language, {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
 
             console.log(start_date);
             console.log(start_time);
-            var html_string = "<div class=\"col s12 l6\"><div class=\"card horizontal\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + "</h6><h6>" + location + "</h6><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a></blockquote>" + "</div></div></div></div>"
+            var html_string = "<div class=\"col s10 push-s1 l6\"><div class=\"card horizontal\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a></blockquote>" + "</div></div></div></div>"
             $('.calendar-events').append(html_string);
         });
     });
