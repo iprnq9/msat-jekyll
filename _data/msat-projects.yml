@@ -52,6 +52,7 @@
 - title: 'APEX'
   url: 'apex'
   competition: 'Nanosat-9'
+  keyword: 'NS-9'
   ongoing: true
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-9/'
   tagline: 'Demonstrating a new multi-mode propulsion system that is being developed at Missouri S&T.'

@@ -42,4 +42,54 @@ layout: default
             </div>
         </div>
     </div>
+    <div class="row margin-top calendar-events"></div>
 </div>
+
+<script>
+    var api_key = "AIzaSyBMWU0hcTVS9492xkBcyvIfK6fblhiFhMc";
+    var calendar_id = "mst.edu_jf6ajjf63sjl899fm9sq18pkl8@group.calendar.google.com";
+    //var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
+    var num_events = 4;
+    var query = "{{ page.keyword }}";
+    if(!query){
+        query = "{{ page.nickname }}";
+    }
+    var query = encodeURIComponent(query);
+    var d = new Date();
+    var date = d.toISOString();
+    //console.log(date);
+    var url = "https://www.googleapis.com/calendar/v3/calendars/" + calendar_id + "/events?key=" + api_key + "&singleEvents=True&orderBy=startTime&showDeleted=False&maxResults=" + num_events + "&timeMin=" + date + "&q=" + query;
+    $.getJSON(url, function (json) {
+        //console.log(json.items[0].summary);
+        var events = json.items;
+        console.log(json.items);
+        var html_string = "<h3 class='white-text'>{{ page.nickname }} Events</h3>";
+        if (json.items.length) {
+            $('.calendar-events').before(html_string);
+        }
+        $(events).each(function (index) {
+            console.log(events[index].summary);
+            var title = events[index].summary;
+            var location = events[index].location;
+            if (location == undefined) {
+                location = "Probably in Toomey"
+            }
+            var link = events[index].htmlLink;
+            var options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+            var start_date = new Date(events[index].start.dateTime).toLocaleDateString('en-US', options);
+            var start_time = new Date(events[index].start.dateTime).toLocaleTimeString(navigator.language, {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            var end_time = new Date(events[index].end.dateTime).toLocaleTimeString(navigator.language, {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            console.log(start_date);
+            console.log(start_time);
+            var html_string = "<div class=\"col s10 push-s1 l6\"><div class=\"card horizontal hoverable\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a></blockquote>" + "</div></div></div></div>"
+            $('.calendar-events').append(html_string);
+        });
+    });
+</script>

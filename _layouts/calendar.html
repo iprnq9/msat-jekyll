@@ -1,83 +1,26 @@
 ---
-# Derive this layout from the default layout.
-# The content found below this Front Matter will be inserted on the default layout where it says {% content %}.
 layout: default
 ---
 
-
-{% if page.show_parallax contains 'True' %}
-<div class="parallax-container">
-    <div class="caption center-align">
-        <h3 class="white-text">Satellites are like Buzz Lightyear</h3>
-        <h5 class="light grey-text text-lighten-3">They fall with style.</h5>
-    </div>
-
-    <div class="container">
-        <div class="row  margin-top shift-down">
-            <div class="col s12 l10 push-l1 card-panel white big-text z-depth-4">
-                {{content}}
-            </div>
-        </div>
-    </div>
-
-    <div class="parallax">
-        <img src="{{ site.baseurl }}{{page.parallax_image}}"/>
-    </div>
-</div>
-{% endif %}
-
-
-<script>
-    $(document).ready(function () {
-        $('.parallax').parallax();
-    });
-</script>
-
 <div class="container">
-    {% if site.data.msat-projects %}
-    <h3 class="white-text">Ongoing Projects</h3>
-    <div class="row margin-top flex-height">
-        {% for project in site.data.msat-projects %}
-        {% if project.ongoing %}
-        <div class="col s10 push-s1 l4 flex-item flex-height">
-            <a href="{{ site.baseurl }}projects/{{project.url}}.html">
-                <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
-                    <div class="tile-image-large">
-                        <img src="{{ site.baseurl }}{{project.tile_image}}"/>
-                    </div>
-                    <div class="tile-content">
-                        <div class="tile-title">{{ project.title }}</div>
-                        <div class="tile-description">{{ project.tagline }}</div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-
     <div class="row margin-top calendar-events"></div>
+    <div class="row">
+        <div class="col s12 center-align">
+                <a class="btn green" href="https://calendar.google.com/calendar/embed?src=mst.edu_jf6ajjf63sjl899fm9sq18pkl8%40group.calendar.google.com&ctz=America/Chicago" target="_blank">View Google Calendar</a>
+        </div>
+    </div>
 </div>
-
-<script>
-
-</script>
-
-<!-- Moment.js not used
-<script src="{{site.baseurl}}js/moment.min.js"></script>
--->
 
 <script>
     var api_key = "AIzaSyBMWU0hcTVS9492xkBcyvIfK6fblhiFhMc";
     var calendar_id = "mst.edu_jf6ajjf63sjl899fm9sq18pkl8@group.calendar.google.com";
     //var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
-    var num_events = 4;
+    var num_events = 10;
     var query = "{{ page.keyword }}";
     if(!query){
         query = "";
     }
-    query = encodeURIComponent(query);
+    var query = encodeURIComponent(query);
     var d = new Date();
     var date = d.toISOString();
     //console.log(date);
@@ -86,7 +29,7 @@ layout: default
         //console.log(json.items[0].summary);
         var events = json.items;
         console.log(json.items);
-        var html_string = "<h3 class='white-text'>Upcoming Events</h3>";
+        var html_string = "<h3 class='white-text'>All Upcoming Events</h3>";
         if (json.items.length) {
             $('.calendar-events').before(html_string);
         }
@@ -95,7 +38,7 @@ layout: default
             var title = events[index].summary;
             var location = events[index].location;
             if (location == undefined) {
-                location = "Probably in Toomey"
+                location = "Probably in Toomey (not specified) "
             }
             var link = events[index].htmlLink;
             var options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
