@@ -1,6 +1,7 @@
 - title: 'MR & MRS SAT'
   url: 'mr-mrs-sat'
   competition: 'Nanosat-8'
+  keyword: 'NS-8'
   ongoing: true
   competition: 'Nanosat-8'
   repo_url: 'https://svn.mst.edu/research/mrsat/trunk/Nanosat-8/'
@@ -68,12 +69,38 @@
     States.
 
   timeline:
-    - date: 'January 2016'
-      text: 'M-SAT joins the Nanosat-9 competition.'
-    - date: 'January 2017'
-      text: 'Preliminary Design Review for APEX'
-    - date: 'August 2017'
-      text: 'SmallSat Conference'
+    - date: January 2016
+      text: University Nanosat 9 Program Kick-off, Albuquerque New Mexico
+    - date: March 2016
+      text: Systems Concept Review
+    - date: April 2016
+      text: Systems Requirements Review
+    - date: June 2016
+      text: Satellite Fabrication Course 101, Albuquerque, New Mexico
+    - date: August 2016
+      text: Small Satellite Conference 2016, Logan, Utah
+    - date: August 2016
+      text: Program Management Review 1, Logan, Utah
+    - date: Fall 2016
+      text: Component Design and Selection
+    - date: December 2016
+      text: Brass Level Board Testing
+    - date: January 2017
+      text: Preliminary Design Review
+    - date: Spring 2017
+      text: Component Testing and Engineering Unit Design
+    - date: April 2017
+      text: Silver Level Board Testing
+    - date: April 2017
+      text: Internal Review
+    - date: August 2017
+      text: Small Satellite Conference 2017, Logan, Utah
+    - date: August 2017
+      text: Program Management Review 2, Logan, Utah
+    - date: Fall 2017
+      text: Engineering Unit Construction
+    - date: January 2018
+      text: Flight Selection Review, Albuquerque, NM
 
   people:
      - role: 'Principal Investigator'

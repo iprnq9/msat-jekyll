@@ -98,7 +98,8 @@ theme_color: 212121
                             <div class="collapsible-body grey lighten-4">
                                 <ul>
                                     {% for project in site.data.msat-projects %}
-                                    <li><a href="{{ site.baseurl }}projects/{{project.url}}.html">{{project.title}}</a></li>
+                                    <li><a href="{{ site.baseurl }}projects/{{project.url}}.html">{{project.title}}</a>
+                                    </li>
                                     {% endfor %}
                                 </ul>
                             </div>
@@ -114,6 +115,8 @@ theme_color: 212121
                             </div>
                         </li>
                         <li><a href="{{ site.baseurl }}outreach/">Outreach</a></li>
+                        <li><a href="{{ site.baseurl }}publications/">Publications</a></li>
+                        <li><a href="{{ site.baseurl }}calendar.html">Calendar</a></li>
                         <li class="bold"><a class="collapsible-header waves-effect">Repo Access</a>
                             <div class="collapsible-body grey lighten-4">
                                 <ul>

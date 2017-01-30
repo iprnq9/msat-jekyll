@@ -47,12 +47,15 @@ layout: default
 
 <script>
     var api_key = "AIzaSyBMWU0hcTVS9492xkBcyvIfK6fblhiFhMc";
-    var calendar_id = "mst.edu_jf6ajjf63sjl899fm9sq18pkl8@group.calendar.google.com";
-    //var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
+    //var calendar_id = "mst.edu_jf6ajjf63sjl899fm9sq18pkl8@group.calendar.google.com";
+    var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
     var num_events = 4;
     var query = "{{ page.keyword }}";
     if(!query){
         query = "{{ page.nickname }}";
+    }
+    if(!query){
+        query = "{{ page.title }}";
     }
     var query = encodeURIComponent(query);
     var d = new Date();
@@ -63,7 +66,7 @@ layout: default
         //console.log(json.items[0].summary);
         var events = json.items;
         console.log(json.items);
-        var html_string = "<h3 class='white-text'>{{ page.nickname }} Events</h3>";
+        var html_string = "<h3 class='white-text'>{{page.title}} Events</h3>";
         if (json.items.length) {
             $('.calendar-events').before(html_string);
         }

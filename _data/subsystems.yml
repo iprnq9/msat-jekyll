@@ -1,6 +1,7 @@
 - title: 'Command & Data Handling'
   nickname: 'C&DH'
   url: 'command-and-data-handling'
+  keyword: 'CDH'
   description: |
     The command and data handling subsystem is the brains of the satellite, controlling what the spacecraft does, when it does it, and why it is doing it. It is responsible for data operations and issuing commands to multiple systems aboard the spacecraft. It also controls the decision making capabilities of the spacecraft, as all data that are needed for any function of the satellite pass through this system. Without a command and data handling subsystem, the spacecraft would not function at all.
 
@@ -10,7 +11,7 @@
     connected directly to the flight computer with a 1-Wire bus. The Command and Data Handling system is able to issue commands and receive data to and from each system using a variety of data buses.
   image: 'image/goes/here.png'
   images:
-  keyword: 'CDH'
+
 
 - title: 'Communications'
   nickname: 'COM'
@@ -39,6 +40,7 @@
 
 - title: 'Integration'
   nickname: 'INT'
+  keyword: 'integration'
   url: 'integration'
   description: |
     The purspose of the integration subsystem is to bring together all the subsystems. Each subsystem has different technologies and ideas, and these must be compatible with the overall design of the satellite. Integration also verifies that the design parameters and program requirement are met. Finally, complete assembly of the satellites is done to make sure the satellite actually fits together properly.  Since assembly of the satellite is performed in a clean room, Integration exchanges the clean room suits twice a semester.
@@ -48,6 +50,7 @@
 
 - title: 'Payload'
   url: 'payload'
+  keyword: 'SI'
   description: |
     The whole point of the mission...
 
@@ -55,6 +58,7 @@
 
 - title: 'Power'
   nickname: 'PWR'
+  keyword: 'power'
   url: 'power'
   description: |
     The objective of the power subsystem is to acquire, store, and distribute power to a spacecraft in order to maintain the functionality of that spacecraft throughout the duration of its mission. The Electrical Power System (EPS) must be able to generate power, usually through the usage of solar panels, store that energy, and regulate it so that it is distributed in such a manner that will not harm any of the components of the satellite. Each of the major components of the EPS are determined by the requirements of the rest of the components of the satellite that use power and that availability of power to the satellite on its proposed orbit.
@@ -77,6 +81,7 @@
 
 - title: 'Structures'
   nickname: 'STR'
+  keyword: 'structures'
   url: 'structures'
   description: |
     The structures subsystem deals with the load-bearing body of the spacecraft. A sturdy structural design with sufficient capacity to carry all necessary components is essential to a spacecraft's mission success. It is also essential to limit the mass and size of the spacecraft in order to lower the costs associated with placing it in orbit. These primary constraints drive the overall structural design of most spacecraft. The structures subsystem analyzes the design of the frame of the spacecraft utilizing Finite Element Analysis software to ensure that it meets these requirements and remains structurally sound during different phases of the mission, including transport, launch, deployment, and orbit.
@@ -90,6 +95,7 @@
 
 - title: 'Thermal'
   nickname: 'THM'
+  keyword: 'Thermal'
   url: 'thermal'
   description: |
     The Thermal subsystem is responsible for providing adequate thermal protection for the satellite during all mission phases. To ensure that the temperature sensitive components will not be harmed during the mission, the thermal subsystem is also responsible for analyzing and simulating the heat and energy sources that the satellite will encounter throughout the mission. The driving constraints for the design of the thermal system include hardware operational temperatures, structural material optical properties, spacecraft flight altitude, and spacecraft internal energy generation.
