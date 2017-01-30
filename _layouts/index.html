@@ -6,22 +6,43 @@ layout: default
 
 
 {% if page.show_parallax contains 'True' %}
-<div class="parallax-container">
+<div class="background">
     <div class="caption center-align hide">
         <h3 class="white-text">Satellites are like Buzz Lightyear</h3>
         <h5 class="light grey-text text-lighten-3">They fall with style.</h5>
     </div>
 
     <div class="container">
-        <div class="row  margin-top shift-down">
-            <div class="col s12 l10 push-l1 card-panel white big-text z-depth-4">
+        <div class="row">
+            <div class="col s12 l10 push-l1 card-panel white big-text z-depth-4 margin-top shift-down">
                 {{content}}
             </div>
         </div>
     </div>
 
-    <div class="parallax">
-        <img src="{{ site.baseurl }}{{page.parallax_image}}"/>
+    <div class="container projects">
+        {% if site.data.msat-projects %}
+        <h3 class="white-text hide">Ongoing Projects</h3>
+        <div class="row margin-top flex-height">
+            {% for project in site.data.msat-projects %}
+            {% if project.ongoing %}
+            <div class="col s10 push-s1 l4 flex-item flex-height">
+                <a href="{{ site.baseurl }}projects/{{project.url}}.html">
+                    <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
+                        <div class="tile-image-large">
+                            <img src="{{ site.baseurl }}{{project.tile_image}}"/>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-title">{{ project.title }}</div>
+                            <div class="tile-description">{{ project.tagline }}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endif %}
@@ -34,29 +55,6 @@ layout: default
 </script>
 
 <div class="container">
-    {% if site.data.msat-projects %}
-    <h3 class="white-text">Ongoing Projects</h3>
-    <div class="row margin-top flex-height">
-        {% for project in site.data.msat-projects %}
-        {% if project.ongoing %}
-        <div class="col s10 push-s1 l4 flex-item flex-height">
-            <a href="{{ site.baseurl }}projects/{{project.url}}.html">
-                <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
-                    <div class="tile-image-large">
-                        <img src="{{ site.baseurl }}{{project.tile_image}}"/>
-                    </div>
-                    <div class="tile-content">
-                        <div class="tile-title">{{ project.title }}</div>
-                        <div class="tile-description">{{ project.tagline }}</div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-
     <div class="row margin-top calendar-events"></div>
 </div>
 
@@ -74,7 +72,7 @@ layout: default
     var calendar_id = "mst.edu_7277l0hsh2n59llhc2uldqnm3k@group.calendar.google.com";
     var num_events = 4;
     var query = "{{ page.keyword }}";
-    if(!query){
+    if (!query) {
         query = "";
     }
     query = encodeURIComponent(query);
