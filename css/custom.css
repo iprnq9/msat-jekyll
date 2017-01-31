@@ -398,7 +398,16 @@ main li.collection-item {
         display: -webkit-flex;
         display: flex;
         align-items: stretch;
+		flex-wrap: wrap;
     }
+
+	.flex-height .card {
+		width: 100%;
+	}
+
+	.flex-height .tile-content {
+		flex: 1 1 auto;
+	}
 
     .flex-item {
         flex-grow: 1;

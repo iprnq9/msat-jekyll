@@ -5,7 +5,6 @@ layout: default
 ---
 
 
-{% if page.show_parallax contains 'True' %}
 <div class="background">
     <div class="caption center-align hide">
         <h3 class="white-text">Satellites are like Buzz Lightyear</h3>
@@ -26,9 +25,9 @@ layout: default
         <div class="row margin-top flex-height">
             {% for project in site.data.msat-projects %}
             {% if project.ongoing %}
-            <div class="col s10 push-s1 l4 flex-item flex-height">
-                <a href="{{ site.baseurl }}projects/{{project.url}}.html">
-                    <div class="card-panel tile hoverable z-depth-1 h200 flex-item">
+            <div class="col s10 push-s1 l4 flex-height">
+                <a href="{{ site.baseurl }}projects/{{project.url}}.html" class="flex-height">
+                    <div class="card-panel tile hoverable z-depth-1 h200">
                         <div class="tile-image-large">
                             <img src="{{ site.baseurl }}{{project.tile_image}}"/>
                         </div>
@@ -45,8 +44,6 @@ layout: default
         {% endif %}
     </div>
 </div>
-{% endif %}
-
 
 <script>
     $(document).ready(function () {
@@ -55,7 +52,7 @@ layout: default
 </script>
 
 <div class="container">
-    <div class="row margin-top calendar-events"></div>
+    <div class="row margin-top calendar-events flex-height"></div>
 </div>
 
 <script>
@@ -93,7 +90,7 @@ layout: default
             var title = events[index].summary;
             var location = events[index].location;
             if (location == undefined) {
-                location = "Probably in Toomey"
+                location = "Probably in Toomey (unspecified)"
             }
             var link = events[index].htmlLink;
             var options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
@@ -109,7 +106,8 @@ layout: default
 
             console.log(start_date);
             console.log(start_time);
-            var html_string = "<div class=\"col s10 push-s1 l6\"><div class=\"card horizontal hoverable\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a></blockquote>" + "</div></div></div></div>"
+            var html_string =
+                "<div class=\"col s10 push-s1 l6 flex-height\"><div class=\"card horizontal hoverable\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6></blockquote>" + "</div></div></div></div>";
             $('.calendar-events').append(html_string);
         });
     });

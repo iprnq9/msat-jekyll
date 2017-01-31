@@ -56,7 +56,8 @@ layout: default
 
             console.log(start_date);
             console.log(start_time);
-            var html_string = "<div class=\"col s10 push-s1 l8 push-l2\"><div class=\"card horizontal hoverable\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a></blockquote>" + "</div></div></div></div>"
+            var html_string =
+                "<div class=\"col s10 push-s1 l8 push-l2 flex-height\"><div class=\"card horizontal hoverable\"><div class=\"card-image fill blue darken-4\"></div><div class=\"card-stacked\"><div class=\"card-content\"><a target=\"_blank\" href=\"" + link + "\" class=\"btn-floating btn-large waves-effect right-align waves-light green margin float-right\"><i class=\"material-icons\">today</i></a><h4>" + title + "</h4><blockquote><h6>" + start_date + "</h6><h6>" + start_time + " - " + end_time + "</h6><h6>" + location + "</h6></blockquote>" + "</div></div></div></div>";
             $('.calendar-events').append(html_string);
         });
     });
